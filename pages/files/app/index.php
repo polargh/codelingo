@@ -100,7 +100,7 @@ if (!$languages->num_rows) {
                 $language = $language->get_result();
                 $language = $language->fetch_assoc();
                 ?>
-                <div class="col-sm-4">
+                <div class="col-sm-4 mb-4">
                     <a href="/app/course/<?php echo $language['id']?>" class="text-dark text-decoration-none <?php echo $userLanguage['completed'] ? "completed" : ""?>">
                         <div class="card card-body animate-card">
                             <?php 
