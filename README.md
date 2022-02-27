@@ -9,3 +9,4 @@ The new way to learn to code, this is codelingo. Codelingo is a new way to learn
 - JQuery
 
 #### Made for BuilderHacks Season One
+Came in 6th Place
