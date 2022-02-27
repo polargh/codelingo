@@ -1,9 +1,6 @@
 //create custom routes, accessed in php by $_GET['params']['param_name_without_:'], remember to not leave a / at the end of the route.
 let customRoutes = [
-    "/news/:id",
-    "/users/:id",
-	"/users/:id/email",
-	"/settings/:name/:value"
+    "/app/course/:id",
 ]
 let navBarWrapperSelector = ".navbar-nav";
 let contentSelector = "main";
@@ -29,4 +26,5 @@ async function setContent(ctx) {
 
 	let content = await fetch("/pages/router.php?"+query);
 	document.querySelectorAll(contentSelector)[0].innerHTML = await content.text();
+	page.params = ctx.params
 }

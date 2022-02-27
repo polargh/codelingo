@@ -1,14 +1,14 @@
 <?php
-//require_once("global_php_file_to_include_in_all_pages.php");
+require_once("../inc/global.inc.php");
 $path = $_GET['path'];
 if (!$path) {
-    die("Where do you want to go?");
+    die("Error: Unspecified Path");
 }
 if ($path == "/") $path = "/index";
 
 $parsedPath = "";
 foreach(explode("/", $path) as $part) {
-    $parsedPath .= str_contains($part, ":") ? str_replace(":", "[", $part)."]" : "/".$part; 
+    $parsedPath .= strpos($part, ":") !== false ? str_replace(":", "[", $part)."]" : "/".$part; 
 }
 
 $_PARAMS = [];
